@@ -1,0 +1,36 @@
+model_provider = "deepseek-relay"
+model = "deepseek-v4-pro"
+review_model = "deepseek-v4-flash"
+model_reasoning_effort = "xhigh"
+disable_response_storage = true
+network_access = "enabled"
+windows_wsl_setup_acknowledged = true
+model_context_window = 1000000
+model_auto_compact_token_limit = 900000
+
+# ── 模型供应商  ─────────────────────
+
+[model_providers.deepseek-relay]
+name = "DeepSeek"
+base_url = "http://127.0.0.1:4445/v1"
+env_key = "DEEPSEEK_API_KEY"
+
+[model_providers.kimi-relay]
+name = "Kimi (Moonshot)"
+base_url = "http://127.0.0.1:4445/v1"
+env_key = "KIMI_API_KEY"
+
+[model_providers.qwen-relay]
+name = "Qwen (Tongyi)"
+base_url = "http://127.0.0.1:4445/v1"
+env_key = "QWEN_API_KEY"
+
+[model_providers.siliconflow-relay]
+name = "SiliconFlow"
+base_url = "http://127.0.0.1:4445/v1"
+env_key = "SILICONFLOW_API_KEY"
+
+[model_providers.zhipu-relay]
+name = "Zhipu (GLM)"
+base_url = "http://127.0.0.1:4445/v1"
+env_key = "ZHIPU_API_KEY"
