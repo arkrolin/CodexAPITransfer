@@ -12,25 +12,25 @@ model_auto_compact_token_limit = 900000
 
 [model_providers.deepseek-relay]
 name = "DeepSeek"
-base_url = "http://127.0.0.1:4445/v1"
+base_url = "http://127.0.0.1:4447/v1"
 env_key = "DEEPSEEK_API_KEY"
 
 [model_providers.kimi-relay]
 name = "Kimi (Moonshot)"
-base_url = "http://127.0.0.1:4445/v1"
+base_url = "http://127.0.0.1:4447/v1"
 env_key = "KIMI_API_KEY"
 
 [model_providers.qwen-relay]
 name = "Qwen (Tongyi)"
-base_url = "http://127.0.0.1:4445/v1"
+base_url = "http://127.0.0.1:4447/v1"
 env_key = "QWEN_API_KEY"
 
 [model_providers.siliconflow-relay]
 name = "SiliconFlow"
-base_url = "http://127.0.0.1:4445/v1"
+base_url = "http://127.0.0.1:4447/v1"
 env_key = "SILICONFLOW_API_KEY"
 
 [model_providers.zhipu-relay]
 name = "Zhipu (GLM)"
-base_url = "http://127.0.0.1:4445/v1"
+base_url = "http://127.0.0.1:4447/v1"
 env_key = "ZHIPU_API_KEY"

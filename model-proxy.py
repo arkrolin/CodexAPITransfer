@@ -16,14 +16,14 @@ import sys
 import argparse
 
 RELAY_HOST = "http://127.0.0.1:4446"
-LISTEN_PORT = 4445
+LISTEN_PORT = 4447
 
 PROVIDER_MODEL_MAPS = {
     "deepseek": {
-        "gpt-5.5": "deepseek-v4-pro[1m]",
+        "gpt-5.5": "deepseek-v4-pro",
         "gpt-5.4": "deepseek-v4-flash",
         "gpt-5.4-mini": "deepseek-v4-flash",
-        "gpt-5": "deepseek-v4-pro[1m]",
+        "gpt-5": "deepseek-v4-pro",
     },
     "kimi": {
         "gpt-5.5": "kimi-k2.6",

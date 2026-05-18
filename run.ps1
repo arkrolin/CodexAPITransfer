@@ -1,7 +1,4 @@
-﻿# 一键启动 Codex + DeepSeek 全部服务
-# 双击此文件或在 PowerShell 中运行
-
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+﻿$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $configPath = "$env:USERPROFILE\.codex\config.toml"
 
 Write-Host "========================================" -ForegroundColor Cyan
@@ -37,7 +34,7 @@ if ($initChoice -match "^[Yy]") {
     
     $providerName = "deepseek"
     $newProvider = "deepseek-relay"
-    $newModel = "deepseek-v4-pro[1m]"
+    $newModel = "deepseek-v4-pro"
     $newReview = "deepseek-v4-flash"
     $envPrefix = "DEEPSEEK"
     $upstream = "https://api.deepseek.com/v1"
@@ -197,7 +194,7 @@ if ($startChoice -match "^[Yy]") {
     Write-Host ""
 
     # 启动 codex-relay
-    Write-Host "[1/2] 启动 codex-relay (端口 4001, 上游: $upstream)..." -ForegroundColor Green
+    Write-Host "[1/2] 启动 codex-relay (端口 4446, 上游: $upstream)..." -ForegroundColor Green
     $env:CODEX_RELAY_UPSTREAM = $upstream
     $env:CODEX_RELAY_API_KEY = $apiKey
     $env:CODEX_RELAY_PORT = "4446"
@@ -213,7 +210,7 @@ if ($startChoice -match "^[Yy]") {
     Write-Host "  -> relay 已启动" -ForegroundColor Gray
 
     # 启动模型代理
-    Write-Host "[2/2] 启动模型转接 (端口 4002)..." -ForegroundColor Green
+    Write-Host "[2/2] 启动模型转接 (端口 4447)..." -ForegroundColor Green
     $proxyJob = Start-Job -Name "model-proxy" -ScriptBlock {
         param($scriptDir)
         python "$scriptDir\model-proxy.py" 2>&1 | Out-File "$env:TEMP\codex-proxy.log"
