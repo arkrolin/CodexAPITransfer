@@ -8,13 +8,13 @@ CodexAPITransfer  是 [codex-relay](https://github.com/anthropics/codex-relay) �
 
 ## 支持的模型供应商
 
-| 供应商          | 模型            |
-| --------------- | --------------- |
-| DeepSeek        | deepseek-v4-pro |
-| Kimi (Moonshot) | kimi-k2.6       |
-| Qwen (Tongyi)   | qwen3-max       |
-| SiliconFlow     | DeepSeek-V3     |
-| Zhipu (GLM)     | glm-5.1         |
+| 供应商      | 模型            |
+| ----------- | --------------- |
+| DeepSeek    | deepseek-v4-pro |
+| Kimi        | kimi-k2.6       |
+| Qwen        | qwen3-max       |
+| SiliconFlow | DeepSeek-V3     |
+| Zhipu       | glm-5.1         |
 
 ## 前置依赖
 
