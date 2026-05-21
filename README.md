@@ -11,7 +11,6 @@ CodexAPITransfer  是 [codex-relay](https://github.com/anthropics/codex-relay) �
 | 供应商      | 模型            |
 | ----------- | --------------- |
 | DeepSeek    | deepseek-v4-pro |
-| Kimi        | kimi-k2.6       |
 | Qwen        | qwen3-max       |
 | SiliconFlow | DeepSeek-V3     |
 | Zhipu       | glm-5.1         |
@@ -42,6 +41,20 @@ codex-relay --help
 
 ```powershell
 .\run.ps1
+```
+
+### 权限提示（默认无法运行 .ps1）
+
+如果提示“在此系统上禁止运行脚本”，请在 PowerShell 中执行以下任一方式：
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
+
+或仅本次绕过：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run.ps1
 ```
 
 脚本会引导你完成以下步骤：

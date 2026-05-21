@@ -6,6 +6,30 @@ Write-Host "  Codex APP 转接服务" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
+# 0. 选择使用方式（原始 / 转接）
+$modeChoice = Read-Host "请选择使用方式: [1] Codex 原始(账号登录) [2] 其他模型转接 (默认: 2)"
+$useRelay = $true
+if ($modeChoice -match "^1$") {
+    $useRelay = $false
+}
+
+if ($useRelay) {
+    # 备份模板配置（供恢复原始配置）
+    if (Test-Path "$scriptDir\config.toml") {
+        Copy-Item -Path "$scriptDir\config.toml" -Destination "$scriptDir\config.toml.bak" -Force
+        Write-Host "已备份 config.toml -> config.toml.bak" -ForegroundColor Green
+    }
+}
+else {
+    # 还原模板配置
+    if (Test-Path "$scriptDir\config.toml.bak") {
+        Copy-Item -Path "$scriptDir\config.toml.bak" -Destination "$scriptDir\config.toml" -Force
+        Write-Host "已还原 config.toml (原始模式)" -ForegroundColor Green
+    }
+    Write-Host "已选择 Codex 原始模式，不进行初始化和服务启动。" -ForegroundColor Yellow
+    exit 0
+}
+
 # 1. 询问是否初始化
 $initChoice = Read-Host "是否进行初始化配置 (Y/N)?"
 if ($initChoice -match "^[Yy]") {
