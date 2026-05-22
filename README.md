@@ -1,10 +1,10 @@
-# CodexAPITransfer
+# CodexTransfer
 
-CodexAPITransfer  是 [codex-relay](https://github.com/anthropics/codex-relay) 项目的包装脚本，为 Codex APP 提供多模型供应商的本地转接服务。
+CodexTransfer  是以[codex-relay](https://github.com/anthropics/codex-relay) 为基础的API转接，为 Codex APP 提供多模型供应商的转接服务。
 
 ## 特别感谢
 
-本项目基于 **[codex-relay](https://github.com/anthropics/codex-relay)** 构建，感谢原项目作者及贡献者提供了优秀的 Codex 本地中继方案。codex-relay 负责将 Codex APP 的请求转发到上游 API.
+本项目基于 **[codex-relay](https://github.com/MetaFARS/codex-relay)** 构建，感谢原项目作者及贡献者提供了优秀的 Codex 本地中继方案。codex-relay 负责将 Codex APP 的请求转发到上游 API.
 
 ## 支持的模型供应商
 
